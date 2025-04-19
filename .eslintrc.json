@@ -1,0 +1,49 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+  "array-callback-return": "error",
+  "no-await-in-loop": "warn",
+  "no-constant-binary-expression": "error",
+  "no-duplicate-imports": "error",
+  "no-new-native-nonconstructor": "error",
+  "no-promise-executor-return": "error",
+  "no-self-compare": "error",
+  "no-template-curly-in-string": "error",
+  "no-unmodified-loop-condition": "error",
+  "no-unreachable-loop": "error",
+  "no-unused-private-class-members": "error",
+  "no-use-before-define": "error",
+  "require-atomic-updates": "error",
+  "func-style": ["error", "expression"],
+  "max-params": ["error", 4],
+  "max-statements": ["warn", 64],
+  "max-lines-per-function": ["error", 90],
+  "max-classes-per-file": ["error", 1],
+  "max-depth": ["warn", 4],
+  "eqeqeq": "error",
+  "id-length": [
+      "error",
+      {
+          "min": 1,
+          "max": 24,
+          "properties": "always"
+      }
+  ],
+  "init-declarations": ["error", "always"],
+  "max-lines": "error",
+  "no-alert": "error",
+  "no-implicit-coercion": "error",
+  "no-invalid-this": "error",
+  "no-lonely-if": "error",
+  "no-loop-func": "error",
+  "no-multi-str": "error",
+  "no-throw-literal": "error",
+  "no-unneeded-ternary": "error",
+  "no-var": "error",
+  "prefer-const": "error",
+  "prefer-promise-reject-errors": "error",
+  "prefer-template": "error",
+  "require-await": "warn",
+  "yoda": ["error", "never"]
+  }
+}

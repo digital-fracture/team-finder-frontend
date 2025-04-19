@@ -1,0 +1,16 @@
+.participants-feed-wrapper {
+  max-width: 800px;
+  width: 100%;
+  padding: 16px 8px;
+  box-sizing: border-box;
+
+  margin: auto;
+
+  .participants-feed-container {
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 8px;
+    border-radius: 16px;
+  }
+}

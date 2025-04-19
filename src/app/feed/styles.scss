@@ -1,0 +1,10 @@
+.feed-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+
+  .feed-wrapper {
+    padding: 16px 0;
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.skill-test-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #eee;
+  padding: 12px 24px;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 16px;
+
+  .skill-test-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 160%;
+  }
+
+  .skill-test-try-button-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .skill-test-score {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/forms.scss";
+@import "../styles.scss";
+
+.test-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}

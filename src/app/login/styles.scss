@@ -1,0 +1,21 @@
+@import "../../styles/variables.scss";
+@import "../../styles/forms.scss";
+
+.login-page-wrapper {
+  margin: auto;
+  max-width: 100%;
+  width: 640px;
+
+  padding: 100px 10px;
+  box-sizing: border-box;
+
+  .login-page-container {
+    width: 100%;
+    padding: 36px 12px;
+    border-radius: 16px;
+    box-sizing: border-box;
+
+    background-color: $background-white-color;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.05);
+  }
+}

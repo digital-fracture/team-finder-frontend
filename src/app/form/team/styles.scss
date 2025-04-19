@@ -1,0 +1,15 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/forms.scss";
+@import "../styles.scss";
+
+.team-members {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.team-participants-select {
+  width: 100%;
+}

@@ -1,0 +1,167 @@
+@import "../styles/variables.scss";
+
+.form-page-header {
+  font-size: 36px;
+  line-height: 160%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-page-subheader {
+  font-size: 24px;
+  line-height: 160%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-page-placeholder {
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: normal;
+  text-align: center;
+  color: $text-gray-color;
+}
+
+.form-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 24px 0;
+    z-index: 2;
+    font-size: 22px;
+    border-radius: 20px;
+    background: white;
+    box-sizing: content-box;
+
+    button {
+      display: flex;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    input.invalid {
+        border-color: red !important;
+
+        &+.label {
+            color: red !important;
+        }
+
+        &:focus {
+            border-color: red !important;
+        }
+    }
+
+    .error-message {
+        display: block;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 35px;
+        color: #333;
+    }
+
+    .credentials-table {
+        width: 100%;
+        box-sizing: border-box;
+
+        & td {
+            padding: 16px 5px;
+
+            &:first-child {
+                text-align: left;
+            }
+
+            label {
+                position: relative;
+                display: block;
+                width: 100%;
+
+                div.label {
+                    color: #444;
+                    font-size: 16px;
+                    position: absolute;
+                    top: -16px;
+                    left: 11px;
+                    background: #fff;
+                    display: inline-block;
+                    padding: 0 4px;
+                    font-weight: 500;
+                    color: #888;
+                }
+
+                &.checkbox-label {
+                  font-size: 16px;
+                  position: initial;
+                  display: inline;
+                }
+            }
+
+            input, textarea {
+                width: 100%;
+                font-size: 16px;
+                height: 36px;
+                box-sizing: border-box;
+                border-color: #ccc;
+                padding: 10px 15px;
+                height: unset;
+                border-width: 2px;
+
+                &:focus+.label {
+                    color: #333;
+                }
+
+                &[type=checkbox] {
+                  width: initial;
+                  margin: 0.4em;
+                }
+            }
+
+            textarea {
+              resize: none;
+              width: 100%;
+              height: 400px;
+              box-sizing: border-box;
+            }
+
+            input:focus {
+                border-color: #333;
+            }
+
+            input::placeholder {
+                font-weight: 400;
+                color: #aaa;
+                font-size: 15px;
+            }
+        }
+
+        td[colSpan] {
+            text-align: center;
+
+            * {
+                display: inline-block;
+            }
+        }
+
+        .space {
+            padding: 10px 0;
+        }
+    }
+
+    .small-text {
+        color: #555;
+        font-size: 15px;
+    }
+
+    button[type=submit] {
+        width: 100%;
+        padding: 10px 25px;
+        font-size: 18px;
+    }
+}

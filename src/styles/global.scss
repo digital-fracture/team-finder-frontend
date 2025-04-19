@@ -1,0 +1,70 @@
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: $background-light-color;
+  color: $text-dark-color;
+}
+
+a {
+  color: $link-dark-color;
+  text-decoration: none;
+}
+
+a:visited {
+  color: $link-visited-dark-color;
+}
+
+input, textarea, select {
+  font-size: 16px;
+  padding: 7px 15px;
+  border: 1px solid #ccc;
+  color: #333;
+  background-color: $background-white-color;
+  border-radius: 16px;
+  outline: none;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px 20px;
+  border: 1px solid #333;
+  border-radius: 128px;
+  background: #333;
+  color: white;
+  outline: none;
+  box-sizing: border-box !important;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: default;
+}
+
+button:enabled:hover {
+  background: #444;
+}
+
+button:enabled:active {
+  background: #fff;
+  border: 1px solid black;
+  color: #000;
+}
+
+.error-message {
+  font-size: 18px;
+  color: $text-error-color;
+}
+
+a.link-button {
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 20px;
+  border-radius: 128px;
+}

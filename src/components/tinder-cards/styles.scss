@@ -1,0 +1,215 @@
+:root {
+  --color-love: #FF387E;
+  --color-nope: #ff4444;
+  --color-basket: #4c84af;
+  --card-width: 90vw;
+  --card-max-width: 400px;
+  --card-height: 65vh;
+  --button-size: 60px;
+  --shadow-normal: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-card: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.tinder {
+  width: 100vw;
+  height: 94vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: #bcbcbc;
+}
+
+.tinder--status {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  pointer-events: none;
+  width: 90vw;
+  height: 40vh;
+}
+
+.status-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.status-icon.nope { color: var(--color-nope); }
+.status-icon.love { color: var(--color-love); }
+.status-icon.basket { color: var(--color-basket); }
+
+.tinder--cards {
+  flex-grow: 1;
+  padding-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.tinder--card {
+  display: inline-block;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  height: var(--card-height);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  cursor: grab;
+  transition:
+          transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+          opacity 0.3s ease;
+  will-change: transform, opacity;
+}
+
+.tinder--card.moving {
+  transition: none;
+  cursor: grabbing;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.tinder--card h3 {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+.tinder--card p {
+  margin-top: 0.8rem;
+  color: #666;
+}
+
+.tinder--buttons {
+  flex: 0 0 70px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.tinder--buttons button {
+  width: var(--button-size);
+  height: var(--button-size);
+  border-radius: 50%;
+  border: none;
+  background: white;
+  box-shadow: var(--shadow-normal);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.tinder--buttons button:active {
+  transform: scale(0.95);
+}
+
+.empty-state {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #666;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -40%);
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}
+
+.tinder--card.expanded {
+  width: 100vw;
+  height: 90vh !important;
+  max-width: none !important;
+  overflow-y: auto;
+  cursor: default;
+  transform: none !important;
+}
+
+.tinder--card.expanded .card-content {
+  transition: height 0.3s ease;
+}
+
+.detailed-content {
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.2s;
+  position: relative;
+}
+
+.tinder--card.expanded .detailed-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.close-button {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  top: 0;
+  left: 0;
+}
+
+.details-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.details-link:hover {
+  color: #1976D2;
+}
+
+
+.tinder--card.expanded {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  max-width: none !important;
+  background: white;
+  border-radius: 0;
+  z-index: 1000;
+}
+
+.tinder--card {
+  transition:
+          transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.3s ease,
+          width 0.3s ease,
+          height 0.3s ease,
+          z-index 0.3s ease;
+}
+.tinder--card {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
