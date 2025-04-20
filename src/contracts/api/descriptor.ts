@@ -1,7 +1,12 @@
-import BoardApiDescriptor from "./boards";
-import ListApiDescriptor from "./lists";
-import TaskApiDescriptor from "./tasks";
+import AuthenticationDescriptor from "./auth";
+import FeedDescriptor from "./feed";
+import TeamDescriptor from "./team";
+import UserDescriptor from "./user";
 
-type ApiDescriptor = never;
+type ApiDescriptor =
+  | AuthenticationDescriptor
+  | FeedDescriptor
+  | UserDescriptor
+  | TeamDescriptor;
 
 export default ApiDescriptor;

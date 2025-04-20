@@ -1,9 +1,5 @@
-import ISkill from "./skill";
-
 export default interface IParticipantForm {
-  university: string;
-  skills: ISkill[];
+  user_id: number;
   description: string;
-  name: string;
-  // TBD
+  university?: string;
 }
