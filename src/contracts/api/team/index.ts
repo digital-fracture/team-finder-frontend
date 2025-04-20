@@ -6,6 +6,8 @@ import ITeamProfileCreateDescriptor from "./team-profile-create";
 import ITeamProfileGetDescriptor from "./team-profile-get";
 import ITeamProfileUpdateDescriptor from "./team-profile-update";
 import ITeamProfileDeleteDescriptor from "./team-profile-delete";
+import ITeamAddMemberDescriptor from "./team-add-member";
+import ITeamKickMemberDescriptor from "./team-kick-member";
 
 type TeamDescriptor =
   | ITeamCreateDescriptor
@@ -15,6 +17,8 @@ type TeamDescriptor =
   | ITeamProfileCreateDescriptor
   | ITeamProfileGetDescriptor
   | ITeamProfileUpdateDescriptor
-  | ITeamProfileDeleteDescriptor;
+  | ITeamProfileDeleteDescriptor
+  | ITeamAddMemberDescriptor
+  | ITeamKickMemberDescriptor;
 
 export default TeamDescriptor;

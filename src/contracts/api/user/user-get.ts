@@ -15,6 +15,7 @@ interface IGetUserResponses {
   200: IUser;
   400: unknown;
   403: JWTErrorResponse; // JWT possibly is expired
+  404: unknown;
   422: IValidationErrorResponse;
 }
 

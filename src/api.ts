@@ -13,19 +13,29 @@ class Api {
     private readonly _modules: BaseApiModule[]
   ) {
     this._apiUrlsMap = {
-      "api.boards.create": "/api/boards/{user_tracker_id}/create/",
-      "api.boards.get": "/api/boards/{user_tracker_id}/get_boards/",
-      "api.boards.delete": "/api/boards/{user_tracker_id}/delete/",
-      "api.lists.create": "/api/lists/{user_tracker_id}/{board_id}/create/",
-      "api.lists.get": "/api/lists/{user_tracker_id}/{board_id}/get/",
-      "api.lists.delete":
-        "/api/lists/{user_tracker_id}/{board_id}/{list_id}/delete/",
-      "api.tasks.create":
-        "/api/tasks/{user_tracker_id}/{board_id}/{list_id}/create/",
-      "api.tasks.get":
-        "/api/tasks/{user_tracker_id}/{board_id}/{list_id}/{task_id}/get/",
-      "api.tasks.delete":
-        "/api/tasks/{user_tracker_id}/{board_id}/{list_id}/{task_id}/delete/",
+      "v1.authenticate": "/api/auth",
+      "v1.feed.user.new": "/api/feed/user/new",
+      "v1.feed.team.new": "/api/feed/team/new",
+      "v1.feed.user.get": "/api/feed/user",
+      "v1.feed.team.get": "/api/feed/team",
+      "v1.user.create": "/api/user",
+      "v1.user.get": "/api/user",
+      "v1.user.update": "/api/user",
+      "v1.user.delete": "/api/user",
+      "v1.user.profile.create": "/api/user/{id}/profile",
+      "v1.user.profile.get": "/api/user/{id}/profile",
+      "v1.user.profile.update": "/api/user/{id}/profile",
+      "v1.user.profile.delete": "/api/user/{id}/profile",
+      "v1.team.create": "/api/team",
+      "v1.team.get": "/api/team",
+      "v1.team.update": "/api/team",
+      "v1.team.delete": "/api/team",
+      "v1.team.profile.create": "/api/team/{id}/profile",
+      "v1.team.profile.get": "/api/team/{id}/profile",
+      "v1.team.profile.update": "/api/team/{id}/profile",
+      "v1.team.profile.delete": "/api/team/{id}/profile",
+      "v1.team.member.add": "/api/team/{id}/member",
+      "v1.team.member.kick": "/api/team/{id}/member",
     };
 
     const context: IApiContext = {

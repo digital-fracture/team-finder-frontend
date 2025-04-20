@@ -15,6 +15,7 @@ interface ITeamGetResponses {
   200: ITeam;
   400: unknown;
   403: JWTErrorResponse; // Possibly invalid JWT
+  404: unknown;
   422: IValidationErrorResponse;
 }
 
